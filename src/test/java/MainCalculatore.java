@@ -72,7 +72,7 @@ public class MainCalculatore {
             out.writeObject(results);
             out.close();
             fileOut.close();
-            System.out.print("Serialized data is saved");
+            System.out.print("We save here all converted results");
         } catch (IOException e) {
             e.printStackTrace();
         }
