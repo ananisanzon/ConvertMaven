@@ -2,24 +2,21 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainCalculatore {
-    private static ArrayList<Double> results;
+    private static ArrayList<Double> results;  //List of all results
     public static void main(String[] args) throws Exception {
         results = new ArrayList<>();
-        // @BeforeClass
+
         //welcome screen, user choose convert to dolar/shekel
-
         System.out.println("Welcome to our calculator. We help you to calculate your amount to Dollar or Shekel.");
-
         int choiceToWhile = 1; // to recognize in while loop
 
-        // @Test
-        while (choiceToWhile == 1) {
+        while (choiceToWhile == 1) { //if user chose convert to shekel or dollar only
             System.out.println("Please choose an option 1 , 2 or 3:");
             System.out.println("1- Dollars to shekels");
             System.out.println("2- Shekels  to dollars");
             System.out.println("3- Exit");
 
-
+            //Daniel, this block never runs.
             Scanner scanner = new Scanner(System.in);
             int choice = 0;
 
@@ -29,8 +26,8 @@ public class MainCalculatore {
                 System.out.println("User entered a forbidden key");
             }
 
-
-            if (choice != 1 && choice != 2 && choice != 3) //if user's choice is wrong
+            //if user's choice is wrong
+            if (choice != 1 && choice != 2 && choice != 3)
             {
                 throw new Exception("Wrong choice. Insert only 1,2,or 3.");
             } else if (choice == 3) //if exit
@@ -62,8 +59,6 @@ public class MainCalculatore {
                 results.add(userSumUSD);
             }
         }
-
-        //  @AfterClass
         System.out.println("Thanks for using our currency converter");
         System.out.println("You all results: " + results);
     }

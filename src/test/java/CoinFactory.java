@@ -1,4 +1,4 @@
-
+//initialize ILS,USD objects/
 public class CoinFactory {
     public static Coin getCoinInstance(EnumCoins coin) {
         try {
@@ -14,7 +14,6 @@ public class CoinFactory {
         }catch (Exception e) {
             e.printStackTrace();
             System.out.println("Insert only 1 ,2 or 3");
-           // return null;
         }
         return null;
     }

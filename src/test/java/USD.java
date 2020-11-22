@@ -1,7 +1,7 @@
 
 //this class extends Coin and implements the abstract method getvalue()
 public class USD extends Coin{
-    private final double value= 3.52;
+    private final double value= 3.52; //value of dollar
     private  double result;
 
     @Override
@@ -12,5 +12,5 @@ public class USD extends Coin{
     public double calculate(double userValue)
 {
         return userValue * getValue();
-    }
+    } //convert function
 }
