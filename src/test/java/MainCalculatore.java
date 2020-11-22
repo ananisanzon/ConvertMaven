@@ -1,3 +1,6 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -61,5 +64,17 @@ public class MainCalculatore {
         }
         System.out.println("Thanks for using our currency converter");
         System.out.println("You all results: " + results);
+
+        //serialise- save results in text file
+        try {
+            FileOutputStream fileOut = new FileOutputStream("resultText.txt");
+            ObjectOutputStream out = new ObjectOutputStream(fileOut);
+            out.writeObject(results);
+            out.close();
+            fileOut.close();
+            System.out.print("Serialized data is saved");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
